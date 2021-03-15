@@ -14,7 +14,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # @user = User.find(params[:id])
     @user = User.find(params[:id])
       unless @user == current_user
         redirect_to user_path(current_user.id)
